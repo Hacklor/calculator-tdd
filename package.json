@@ -4,5 +4,21 @@
   "description": "Building a calculator in JS using TDD",
   "main": "index.js",
   "author": "Nicole Bekkers",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --require babel-core/register"
+  },
+  "babel": {
+    "presets": [
+      "stage-3",
+      "latest"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0"
+  }
 }
