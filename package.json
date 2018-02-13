@@ -1,0 +1,8 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Building a calculator in JS using TDD",
+  "main": "index.js",
+  "author": "Nicole Bekkers",
+  "license": "MIT"
+}
