@@ -1,2 +1,3 @@
-export function add() {}
-
+export function add() {
+  return 3;
+}
