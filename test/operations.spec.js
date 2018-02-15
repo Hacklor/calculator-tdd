@@ -12,8 +12,4 @@ describe("Operations", () => {
     expect(minus(3, 1)).to.eql(2)
     expect(minus(5, 2)).to.eql(3)
   });
-
-  it("subtracts two integers", () =>
-    expect(minus(5, 2)).to.eql(3)
-  );
 });
