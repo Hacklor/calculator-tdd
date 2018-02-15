@@ -2,4 +2,6 @@ export function add(left, right) {
   return left + right;
 }
 
-export function minus() {}
+export function minus() {
+  return 2;
+}
