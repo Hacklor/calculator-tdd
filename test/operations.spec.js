@@ -18,5 +18,9 @@ describe("Operations", () => {
 
   it("expects result from times function", () =>
     expect(times(1, 2)).to.eql(2)
+    );
+
+  it("expects result from times function using parameters", () =>
+    expect(times(3, 2)).to.eql(6)
   );
 });
