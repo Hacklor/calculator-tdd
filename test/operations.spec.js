@@ -6,5 +6,7 @@ describe("Operations", () => {
     expect(add(1, 2)).to.eql(3)
     expect(add(2, 3)).to.eql(5)
     expect(add(3, 2)).to.eql(5)
+    expect(add(-2, 3)).to.eql(1)
+    expect(add(-5, -3)).to.eql(-8)
   });
 });
