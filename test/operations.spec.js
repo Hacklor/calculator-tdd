@@ -15,4 +15,8 @@ describe("Operations", () => {
     expect(minus(2, 3)).to.eql(-1)
     expect(minus(-5, -2)).to.eql(-3)
   });
+
+  it("calls times function", () =>
+    times()
+  );
 });
