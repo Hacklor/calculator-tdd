@@ -8,7 +8,7 @@ describe("Operations", () => {
     expect(add(3, 2)).to.eql(5)
   });
 
-  it("expect a result when calling minus", () => {
+  it("subtracts two integers", () => {
     expect(minus(3, 1)).to.eql(2)
     expect(minus(5, 2)).to.eql(3)
   });
