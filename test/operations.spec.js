@@ -25,7 +25,7 @@ describe("Operations", () => {
     expect(times(-2, -4)).to.eql(8)
   });
 
-  it("expects a result for square function", () => {
+  it("squares the given integer", () => {
     expect(square(2)).to.eql(4)
     expect(square(4)).to.eql(16)
   });
