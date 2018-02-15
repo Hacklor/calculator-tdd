@@ -11,4 +11,8 @@ describe("Operations", () => {
   it("calls the minus function", () =>
     minus()
   );
+
+  it("expect a result when calling minus", () =>
+    expect(minus(3, 1)).to.eql(2)
+  );
 });
