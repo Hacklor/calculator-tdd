@@ -31,4 +31,10 @@ describe("Operations", () => {
     expect(square(0)).to.eql(0)
     expect(square(-2)).to.eql(4)
   });
+
+  describe("Regression tests", () => {
+    it("combines different operations", () =>
+      expect(times(minus(square(add(2, 3)), 5), 5)).to.eql(100)
+    );
+  });
 });

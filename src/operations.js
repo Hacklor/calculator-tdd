@@ -1,6 +1,4 @@
-export function add(left, right) {
-  return left + right;
-}
+export const add = (left, right) => left + right;
 
 export function minus(left, right) {
   return left - right;
