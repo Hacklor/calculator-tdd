@@ -7,5 +7,5 @@ export function minus(left, right) {
 }
 
 export function times(left, right) {
-  return 2;
+  return left * right;
 }
