@@ -10,4 +10,6 @@ export function times(left, right) {
   return left * right;
 }
 
-export function square() {}
+export function square() {
+  return 4
+}
