@@ -8,10 +8,6 @@ describe("Operations", () => {
     expect(add(3, 2)).to.eql(5)
   });
 
-  it("calls the minus function", () =>
-    minus()
-  );
-
   it("expect a result when calling minus", () =>
     expect(minus(3, 1)).to.eql(2)
   );
