@@ -28,4 +28,8 @@ describe("Operations", () => {
   it("expects a result for square function", () =>
     expect(square(2)).to.eql(4)
   );
+
+  it("expects the square of the given parameter as a result", () =>
+    expect(square(4)).to.eql(16)
+  );
 });
