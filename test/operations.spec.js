@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { add, minus, times } from "../src/operations";
+import { add, minus, times, square } from "../src/operations";
 
 describe("Operations", () => {
   it("adds two integers", () => {
