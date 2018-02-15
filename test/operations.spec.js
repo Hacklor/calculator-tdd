@@ -24,4 +24,8 @@ describe("Operations", () => {
     expect(times(5, -2)).to.eql(-10)
     expect(times(-2, -4)).to.eql(8)
   });
+
+  it("calls square function", () => {
+    square()
+  });
 });
