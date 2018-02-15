@@ -16,7 +16,7 @@ describe("Operations", () => {
     expect(minus(-5, -2)).to.eql(-3)
   });
 
-  it("expects result from times function", () => {
+  it("multiplies two integers", () => {
     expect(times(1, 2)).to.eql(2)
     expect(times(3, 2)).to.eql(6)
   });
