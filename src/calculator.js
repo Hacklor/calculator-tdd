@@ -1,1 +1,5 @@
-export class Calculator{}
+export class Calculator{
+  result() {
+    return 0
+  }
+}
