@@ -16,4 +16,10 @@ describe("Calculator", () => {
     calculator.add(2)
     expect(calculator.result()).to.eql(2)
   });
+
+  it("can add multiple numbers", () => {
+    calculator.add(2)
+    calculator.add(6)
+    expect(calculator.result()).to.eql(8)
+  });
 });

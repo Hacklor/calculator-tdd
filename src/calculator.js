@@ -1,6 +1,6 @@
 import { add } from "./operations";
 
-export class Calculator{
+export class Calculator {
   constructor() {
     this.res = 0;
   }
