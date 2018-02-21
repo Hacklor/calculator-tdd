@@ -1,15 +1,4 @@
-export function add(left, right) {
-  return left + right;
-}
-
-export function minus(left, right) {
-  return left - right;
-}
-
-export function times(left, right) {
-  return left * right;
-}
-
-export function square(number) {
-  return number * number;
-}
+export const add = (left, right) => left + right
+export const minus = (left, right) => left - right
+export const times = (left, right) => left * right
+export const square = (number) => times(number, number)
