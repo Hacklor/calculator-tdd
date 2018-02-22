@@ -10,6 +10,7 @@ export class Calculator {
   }
 
   add(number) {
-    this.res = add(this.res, number)
+    this.res = add(this.res, number);
+    return this;
   }
 }
