@@ -22,4 +22,9 @@ describe("Calculator", () => {
     calculator.add(6)
     expect(calculator.result()).to.eql(8)
   });
+
+  it("can chain adding multiple numbers", () => {
+    calculator.add(1).add(3).add(5);
+    expect(calculator.result()).to.eql(9)
+  });
 });
