@@ -2,15 +2,15 @@ import { add } from "./operations";
 
 export class Calculator {
   constructor() {
-    this.res = 0;
+    this._result = 0;
   }
 
   result() {
-    return this.res;
+    return this._result;
   }
 
   add(number) {
-    this.res = add(this.res, number);
+    this._result = add(this._result, number);
     return this;
   }
 }
