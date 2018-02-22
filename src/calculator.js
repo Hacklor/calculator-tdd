@@ -9,7 +9,7 @@ export class Calculator {
     return this.res;
   }
 
-  add() {
-    this.res = add(0, 2)
+  add(number) {
+    this.res = add(this.res, number)
   }
 }
