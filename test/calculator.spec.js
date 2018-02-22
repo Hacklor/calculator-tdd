@@ -17,12 +17,6 @@ describe("Calculator", () => {
     expect(calculator.result()).to.eql(2)
   });
 
-  it("can add multiple numbers", () => {
-    calculator.add(2)
-    calculator.add(6)
-    expect(calculator.result()).to.eql(8)
-  });
-
   it("can chain adding multiple numbers", () => {
     calculator.add(1).add(3).add(5);
     expect(calculator.result()).to.eql(9)
