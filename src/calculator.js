@@ -5,7 +5,7 @@ export class Calculator {
     this._result = 0;
   }
 
-  result() {
+  get result() {
     return this._result;
   }
 

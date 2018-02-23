@@ -9,16 +9,16 @@ describe("Calculator", () => {
   });
 
   it("has a default result", () => {
-    expect(calculator.result()).to.eql(0)
+    expect(calculator.result).to.eql(0)
   });
 
   it("can add a number", () => {
     calculator.add(2)
-    expect(calculator.result()).to.eql(2)
+    expect(calculator.result).to.eql(2)
   });
 
   it("can chain adding multiple numbers", () => {
     calculator.add(1).add(3).add(5);
-    expect(calculator.result()).to.eql(9)
+    expect(calculator.result).to.eql(9)
   });
 });
