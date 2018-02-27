@@ -22,12 +22,7 @@ describe("Calculator", () => {
     expect(calculator.result).to.eql(9)
   });
 
-  it("can subtract a number", () => {
-    calculator.minus(2)
-    expect(calculator.result).to.eql(-2)
-  });
-
-  it("can subtract a different number", () => {
+  it("can subtract a single number", () => {
     calculator.minus(3)
     expect(calculator.result).to.eql(-3)
   });
