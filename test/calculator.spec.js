@@ -37,16 +37,16 @@ describe("Calculator", () => {
   });
 
   describe("Multiplication", () => {
-    it("can multiply a single number", () => {
+    beforeEach(() => {
       calculator.add(1)
+    });
 
+    it("can multiply a single number", () => {
       calculator.multiply(2)
       expect(calculator.result).to.eql(2)
     });
 
     it("can chain multipying multiple numbers", () => {
-      calculator.add(1)
-
       calculator.multiply(3).multiply(5).multiply(2)
       expect(calculator.result).to.eql(30)
     });
