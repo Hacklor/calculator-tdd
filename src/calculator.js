@@ -20,6 +20,7 @@ export class Calculator {
   }
 
   multiply(number) {
-    this._result = times(this._result, number)
+    this._result = times(this._result, number);
+    return this;
   }
 }
