@@ -34,5 +34,6 @@ describe("Calculator", () => {
 
   it("can multiply a single number", () => {
     calculator.multiply(1)
+    expect(calculator.result).to.eql(0)
   });
 });
