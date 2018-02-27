@@ -1,4 +1,4 @@
-import { add, subtract, times } from "./operations";
+import { add, subtract, multiply } from "./operations";
 
 export class Calculator {
   constructor() {
@@ -20,7 +20,7 @@ export class Calculator {
   }
 
   multiply(number) {
-    this._result = times(this._result, number);
+    this._result = multiply(this._result, number);
     return this;
   }
 }
