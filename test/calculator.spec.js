@@ -66,5 +66,12 @@ describe("Calculator", () => {
       calculator.square()
       expect(calculator.result).to.eql(9)
     });
+
+    it("can chain squaring multiple numbers", () => {
+      calculator.add(3)
+
+      calculator.square()
+      expect(calculator.result).to.eql(9)
+    });
   });
 });

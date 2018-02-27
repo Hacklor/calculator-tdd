@@ -25,6 +25,6 @@ export class Calculator {
   }
 
   square() {
-    this._result = square(2, 2)
+    this._result = square(this._result)
   }
 }
