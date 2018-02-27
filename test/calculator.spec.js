@@ -38,4 +38,11 @@ describe("Calculator", () => {
     calculator.multiply(2)
     expect(calculator.result).to.eql(2)
   });
+
+  it("can multiply a different number", () => {
+    calculator.add(1)
+
+    calculator.multiply(3)
+    expect(calculator.result).to.eql(3)
+  });
 });
