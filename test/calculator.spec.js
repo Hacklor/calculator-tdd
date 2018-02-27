@@ -45,4 +45,11 @@ describe("Calculator", () => {
     calculator.multiply(3)
     expect(calculator.result).to.eql(3)
   });
+
+  it("can chain multipying multiple numbers", () => {
+    calculator.add(1)
+
+    calculator.multiply(3).multiply(5).multiply(2)
+    expect(calculator.result).to.eql(30)
+  });
 });
