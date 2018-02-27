@@ -67,4 +67,16 @@ describe("Calculator", () => {
       expect(calculator.result).to.eql(81)
     });
   });
+
+  describe("Regression test", () => {
+    it("can combine multiple chained commands", () => {
+      calculator
+        .add(7)
+        .subtract(2)
+        .square()
+        .multiply(4)
+
+      expect(calculator.result).to.eql(100)
+    });
+  });
 });
