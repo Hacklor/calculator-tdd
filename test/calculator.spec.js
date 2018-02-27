@@ -31,4 +31,8 @@ describe("Calculator", () => {
     calculator.subtract(1).subtract(2).subtract(7)
     expect(calculator.result).to.eql(-10)
   });
+
+  it("can multiply a single number", () => {
+    calculator.multiply(1)
+  });
 });
