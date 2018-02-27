@@ -16,5 +16,6 @@ export class Calculator {
 
   minus(number) {
     this._result = minus(this._result, number);
+    return this;
   }
 }
