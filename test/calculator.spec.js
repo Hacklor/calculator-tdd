@@ -51,4 +51,10 @@ describe("Calculator", () => {
       expect(calculator.result).to.eql(30)
     });
   });
+
+  describe("Square", () => {
+    it("can square a single number", () => {
+      calculator.square()
+    });
+  });
 });
