@@ -24,5 +24,6 @@ describe("Calculator", () => {
 
   it("can subtract a number", () => {
     calculator.minus(2)
+    expect(calculator.result).to.eql(-2)
   });
 });
