@@ -23,12 +23,12 @@ describe("Calculator", () => {
   });
 
   it("can subtract a single number", () => {
-    calculator.minus(3)
+    calculator.subtract(3)
     expect(calculator.result).to.eql(-3)
   });
 
   it("can chain subtracting multiple numbers", () => {
-    calculator.minus(1).minus(2).minus(7)
+    calculator.subtract(1).subtract(2).subtract(7)
     expect(calculator.result).to.eql(-10)
   });
 });

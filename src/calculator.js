@@ -14,7 +14,7 @@ export class Calculator {
     return this;
   }
 
-  minus(number) {
+  subtract(number) {
     this._result = minus(this._result, number);
     return this;
   }
