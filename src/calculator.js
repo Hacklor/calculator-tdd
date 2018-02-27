@@ -18,4 +18,7 @@ export class Calculator {
     this._result = subtract(this._result, number);
     return this;
   }
+
+  multiply() {
+  }
 }
