@@ -21,4 +21,8 @@ describe("Calculator", () => {
     calculator.add(1).add(3).add(5);
     expect(calculator.result).to.eql(9)
   });
+
+  it("can subtract a number", () => {
+    calculator.minus(2)
+  });
 });
