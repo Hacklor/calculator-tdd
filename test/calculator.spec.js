@@ -18,7 +18,7 @@ describe("Calculator", () => {
   });
 
   it("can chain adding multiple numbers", () => {
-    calculator.add(1).add(3).add(5);
+    calculator.add(1).add(3).add(5)
     expect(calculator.result).to.eql(9)
   });
 
@@ -30,5 +30,10 @@ describe("Calculator", () => {
   it("can subtract a different number", () => {
     calculator.minus(3)
     expect(calculator.result).to.eql(-3)
+  });
+
+  it("can chain subtracting multiple numbers", () => {
+    calculator.minus(1).minus(2).minus(7)
+    expect(calculator.result).to.eql(-10)
   });
 });
