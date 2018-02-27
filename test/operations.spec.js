@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { add, minus, times, square } from "../src/operations";
+import { add, subtract, times, square } from "../src/operations";
 
 describe("Operations", () => {
   it("adds two integers", () => {
@@ -9,11 +9,11 @@ describe("Operations", () => {
   });
 
   it("subtracts two integers", () => {
-    expect(minus(3, 1)).to.eql(2)
-    expect(minus(5, 2)).to.eql(3)
-    expect(minus(7, 3)).to.eql(4)
-    expect(minus(2, 3)).to.eql(-1)
-    expect(minus(-5, -2)).to.eql(-3)
+    expect(subtract(3, 1)).to.eql(2)
+    expect(subtract(5, 2)).to.eql(3)
+    expect(subtract(7, 3)).to.eql(4)
+    expect(subtract(2, 3)).to.eql(-1)
+    expect(subtract(-5, -2)).to.eql(-3)
   });
 
   it("multiplies two integers", () => {
@@ -34,7 +34,7 @@ describe("Operations", () => {
 
   describe("Regression tests", () => {
     it("combines different operations", () =>
-      expect(times(minus(square(add(2, 3)), 5), 5)).to.eql(100)
+      expect(times(subtract(square(add(2, 3)), 5), 5)).to.eql(100)
     );
   });
 });

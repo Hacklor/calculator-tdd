@@ -1,4 +1,4 @@
-import { add, minus } from "./operations";
+import { add, subtract } from "./operations";
 
 export class Calculator {
   constructor() {
@@ -15,7 +15,7 @@ export class Calculator {
   }
 
   subtract(number) {
-    this._result = minus(this._result, number);
+    this._result = subtract(this._result, number);
     return this;
   }
 }
