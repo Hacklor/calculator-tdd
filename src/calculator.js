@@ -1,4 +1,4 @@
-import { add, subtract, multiply } from "./operations";
+import { add, subtract, multiply, square } from "./operations";
 
 export class Calculator {
   constructor() {
@@ -25,5 +25,6 @@ export class Calculator {
   }
 
   square() {
+    this._result = square(2, 2)
   }
 }
