@@ -6,14 +6,20 @@ describe("Operations", () => {
     expect(add(1, 2)).to.eql(3)
     expect(add(2, 3)).to.eql(5)
     expect(add(3, 2)).to.eql(5)
+    expect(add(-2, 3)).to.eql(1)
+    expect(add(2, -3)).to.eql(-1)
+    expect(add(-5, -3)).to.eql(-8)
   });
 
   it("subtracts two integers", () => {
     expect(subtract(3, 1)).to.eql(2)
     expect(subtract(5, 2)).to.eql(3)
-    expect(subtract(7, 3)).to.eql(4)
+    expect(subtract(2, 5)).to.eql(-3)
     expect(subtract(2, 3)).to.eql(-1)
+    expect(subtract(-2, 1)).to.eql(-3)
+    expect(subtract(1, -2)).to.eql(3)
     expect(subtract(-5, -2)).to.eql(-3)
+    expect(subtract(-2, -5)).to.eql(3)
   });
 
   it("multiplies two integers", () => {
