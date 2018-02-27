@@ -70,8 +70,8 @@ describe("Calculator", () => {
     it("can chain squaring multiple numbers", () => {
       calculator.add(3)
 
-      calculator.square()
-      expect(calculator.result).to.eql(9)
+      calculator.square().square()
+      expect(calculator.result).to.eql(81)
     });
   });
 });
