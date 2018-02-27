@@ -33,7 +33,9 @@ describe("Calculator", () => {
   });
 
   it("can multiply a single number", () => {
-    calculator.multiply(1)
-    expect(calculator.result).to.eql(0)
+    calculator.add(1)
+
+    calculator.multiply(2)
+    expect(calculator.result).to.eql(2)
   });
 });
