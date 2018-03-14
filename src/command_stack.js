@@ -1,1 +1,2 @@
-export class CommandStack {}
+export class CommandStack {
+}
