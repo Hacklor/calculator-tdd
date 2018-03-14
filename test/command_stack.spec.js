@@ -1,10 +1,17 @@
 import { expect } from 'chai';
+import chai from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+
 import { CommandStack } from '../src/command_stack';
 import { Calculator } from '../src/calculator';
-import sinon from 'sinon';
 
 describe("CommandStack", () => {
   let calculator, stack;
+
+  before(() => {
+    chai.use(sinonChai)
+  });
 
   beforeEach(() => {
     calculator = new Calculator()
