@@ -4,7 +4,8 @@ import { Calculator } from '../src/calculator';
 
 describe("CommandStack", () => {
   it("executes and gets the default result from the calculator", () => {
-    const stack = new CommandStack()
+    const calculator = new Calculator()
+    const stack = new CommandStack(calculator)
 
     expect(stack.execute()).to.eql(0)
   });
