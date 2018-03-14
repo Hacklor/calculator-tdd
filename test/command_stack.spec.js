@@ -3,17 +3,18 @@ import { CommandStack } from '../src/command_stack';
 import { Calculator } from '../src/calculator';
 
 describe("CommandStack", () => {
-  it("executes and gets the default result from the calculator", () => {
-    const calculator = new Calculator()
-    const stack = new CommandStack(calculator)
+  let calculator, stack;
 
+  beforeEach(() => {
+    calculator = new Calculator()
+    stack = new CommandStack(calculator)
+  });
+
+  it("executes and gets the default result from the calculator", () => {
     expect(stack.execute()).to.eql(0)
   });
 
   it("delays adding a number", () => {
-    const calculator = new Calculator()
-    const stack = new CommandStack(calculator)
-
     stack.add(4)
 
     expect(stack.execute()).to.eql(4)
