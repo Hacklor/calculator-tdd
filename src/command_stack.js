@@ -1,5 +1,14 @@
 export class CommandStack {
+
+  constructor(calculator) {
+    this.calculator = calculator
+  }
+
   execute() {
-    return 0
+    return this.calculator.result
+  }
+
+  add(number) {
+    this.calculator.add(number)
   }
 }
