@@ -22,5 +22,6 @@ export class CommandStack {
 
   subtract(number) {
     this.commands.push( () => this.calculator.subtract(number) )
+    return this
   }
 }
