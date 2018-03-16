@@ -48,6 +48,12 @@ describe("CommandStack", () => {
 
       expect(stack.execute()).to.eql(-4)
     });
+
+    it("can chain the command", () => {
+      stack.subtract(1).subtract(2).subtract(3)
+
+      expect(stack.execute()).to.eql(-6)
+    });
   });
 
   context("undo", () => {
