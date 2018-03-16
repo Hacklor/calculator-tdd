@@ -22,28 +22,32 @@ describe("CommandStack", () => {
     expect(stack.execute()).to.eql(0)
   });
 
-  it("delays adding a number", () => {
-    const spy = sinon.spy(calculator, 'add')
+  context("Addition", () => {
+    it("delays adding a number", () => {
+      const spy = sinon.spy(calculator, 'add')
 
-    stack.add(4)
-    expect(spy).not.to.be.called
+      stack.add(4)
+      expect(spy).not.to.be.called
 
-    expect(stack.execute()).to.eql(4)
+      expect(stack.execute()).to.eql(4)
+    });
+
+    it("can chain the add command", () => {
+      stack.add(1).add(2).add(3)
+
+      expect(stack.execute()).to.eql(6)
+    });
   });
 
-  it("can chain the add command", () => {
-    stack.add(1).add(2).add(3)
+  context("Subtraction", () => {
+    it("delays subtracting a number", () => {
+      const spy = sinon.spy(calculator, 'subtract');
 
-    expect(stack.execute()).to.eql(6)
-  });
+      stack.subtract(4)
+      expect(spy).not.to.be.called
 
-  it("delays subtracting a number", () => {
-    const spy = sinon.spy(calculator, 'subtract');
-
-    stack.subtract(4)
-    expect(spy).not.to.be.called
-
-    expect(stack.execute()).to.eql(-4)
+      expect(stack.execute()).to.eql(-4)
+    });
   });
 
   context("undo", () => {
