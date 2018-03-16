@@ -27,5 +27,6 @@ export class CommandStack {
 
   multiply(number) {
     this.commands.push( () => this.calculator.multiply(number) )
+    return this
   }
 }
