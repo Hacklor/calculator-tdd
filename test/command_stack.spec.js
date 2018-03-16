@@ -56,6 +56,19 @@ describe("CommandStack", () => {
     });
   });
 
+  context("Multiplication", () => {
+    it("delays multiplying a number", () => {
+      const spy = sinon.spy(calculator, 'multiply');
+      stack.add(1)
+
+      stack.multiply(3)
+      expect(spy).not.to.be.called
+
+      expect(stack.execute()).to.eql(3)
+      expect(spy).not.to.be.calledWith(3)
+    });
+  });
+
   context("undo", () => {
     it("does nothing when commands list is empty", () => {
       stack.undo()
