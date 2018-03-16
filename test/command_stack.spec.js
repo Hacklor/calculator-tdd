@@ -88,6 +88,12 @@ describe("CommandStack", () => {
       expect(stack.execute()).to.eql(4)
       expect(spy).to.be.called
     });
+
+    it("can chain the command", () => {
+      stack.add(3).square().add(1)
+
+      expect(stack.execute()).to.eq(10)
+    });
   });
 
   context("undo", () => {
