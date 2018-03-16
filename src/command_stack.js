@@ -1,37 +1,37 @@
 export class CommandStack {
 
   constructor(calculator) {
-    this.calculator = calculator
-    this.commands = []
+    this._calculator = calculator
+    this._commands = []
   }
 
   execute() {
-    this.commands.forEach( command => command() )
+    this._commands.forEach( command => command() )
 
-    return this.calculator.result
+    return this._calculator.result
   }
 
   undo() {
-    this.commands.pop()
+    this._commands.pop()
   }
 
   add(number) {
-    this.commands.push( () => this.calculator.add(number) )
+    this._commands.push( () => this._calculator.add(number) )
     return this
   }
 
   subtract(number) {
-    this.commands.push( () => this.calculator.subtract(number) )
+    this._commands.push( () => this._calculator.subtract(number) )
     return this
   }
 
   multiply(number) {
-    this.commands.push( () => this.calculator.multiply(number) )
+    this._commands.push( () => this._calculator.multiply(number) )
     return this
   }
 
   square() {
-    this.commands.push( () => this.calculator.square() )
+    this._commands.push( () => this._calculator.square() )
     return this
   }
 }
