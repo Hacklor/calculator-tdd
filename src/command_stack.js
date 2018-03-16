@@ -32,5 +32,6 @@ export class CommandStack {
 
   square() {
     this.commands.push( () => this.calculator.square() )
+    return this
   }
 }
