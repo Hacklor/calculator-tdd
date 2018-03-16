@@ -30,6 +30,7 @@ describe("CommandStack", () => {
       expect(spy).not.to.be.called
 
       expect(stack.execute()).to.eql(4)
+      expect(spy).to.be.calledWith(4)
     });
 
     it("can chain the add command", () => {
@@ -47,6 +48,7 @@ describe("CommandStack", () => {
       expect(spy).not.to.be.called
 
       expect(stack.execute()).to.eql(-4)
+      expect(spy).to.be.calledWith(4)
     });
 
     it("can chain the command", () => {
