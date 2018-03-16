@@ -77,6 +77,19 @@ describe("CommandStack", () => {
     });
   });
 
+  context("Multiplication", () => {
+    it("delays squaring the result", () => {
+      const spy = sinon.spy(calculator, 'square');
+      stack.add(2)
+
+      stack.square()
+      expect(spy).not.to.be.called
+
+      expect(stack.execute()).to.eql(4)
+      expect(spy).to.be.called
+    });
+  });
+
   context("undo", () => {
     it("does nothing when commands list is empty", () => {
       stack.undo()
