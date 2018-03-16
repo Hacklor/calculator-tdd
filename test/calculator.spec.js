@@ -12,38 +12,28 @@ describe("Calculator", () => {
     expect(calculator.result).to.eql(0)
   });
 
-  describe("Addition", () => {
-    it("can add a number", () => {
-      calculator.add(2)
-      expect(calculator.result).to.eql(2)
-    });
+  it("can add a number", () => {
+    calculator.add(2)
+    expect(calculator.result).to.eql(2)
   });
 
-  describe("Subtraction", () => {
-    it("can subtract a single number", () => {
-      calculator.subtract(3)
-      expect(calculator.result).to.eql(-3)
-    });
+  it("can subtract a single number", () => {
+    calculator.subtract(3)
+    expect(calculator.result).to.eql(-3)
   });
 
-  describe("Multiplication", () => {
-    beforeEach(() => {
-      calculator.add(1)
-    });
+  it("can multiply a single number", () => {
+    calculator.add(1)
 
-    it("can multiply a single number", () => {
-      calculator.multiply(2)
-      expect(calculator.result).to.eql(2)
-    });
+    calculator.multiply(2)
+    expect(calculator.result).to.eql(2)
   });
 
-  describe("Square", () => {
-    it("can square a single number", () => {
-      calculator.add(2)
+  it("can square a number", () => {
+    calculator.add(2)
 
-      calculator.square()
-      expect(calculator.result).to.eql(4)
-    });
+    calculator.square()
+    expect(calculator.result).to.eql(4)
   });
 
   describe("Regression test", () => {
