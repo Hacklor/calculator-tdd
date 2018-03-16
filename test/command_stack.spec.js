@@ -46,5 +46,12 @@ describe("CommandStack", () => {
 
       expect(stack.execute()).to.eql(0)
     });
+
+    it("removes command, when single one is in list", () => {
+      stack.add(3)
+      stack.undo()
+
+      expect(stack.execute()).to.eql(0)
+    });
   });
 });
