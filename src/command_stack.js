@@ -11,6 +11,9 @@ export class CommandStack {
     return this.calculator.result
   }
 
+  undo() {
+  }
+
   add(number) {
     this.commands.push( () => this.calculator.add(number) )
   }
