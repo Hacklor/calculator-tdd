@@ -53,5 +53,14 @@ describe("CommandStack", () => {
 
       expect(stack.execute()).to.eql(0)
     });
+
+    it("removes only the last command", () => {
+      stack.add(3)
+      stack.subtract(2)
+      stack.add(4)
+      stack.undo()
+
+      expect(stack.execute()).to.eql(1)
+    });
   });
 });
