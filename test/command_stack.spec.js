@@ -39,4 +39,12 @@ describe("CommandStack", () => {
 
     expect(stack.execute()).to.eql(-4)
   });
+
+  context("undo", () => {
+    it("does nothing when commands list is empty", () => {
+      stack.undo()
+
+      expect(stack.execute()).to.eql(0)
+    });
+  });
 });
