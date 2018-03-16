@@ -31,6 +31,12 @@ describe("CommandStack", () => {
     expect(stack.execute()).to.eql(4)
   });
 
+  it("can chain the add command", () => {
+    stack.add(1).add(2).add(3)
+
+    expect(stack.execute()).to.eql(6)
+  });
+
   it("delays subtracting a number", () => {
     const spy = sinon.spy(calculator, 'subtract');
 
@@ -42,13 +48,6 @@ describe("CommandStack", () => {
 
   context("undo", () => {
     it("does nothing when commands list is empty", () => {
-      stack.undo()
-
-      expect(stack.execute()).to.eql(0)
-    });
-
-    it("removes command, when single one is in list", () => {
-      stack.add(3)
       stack.undo()
 
       expect(stack.execute()).to.eql(0)
