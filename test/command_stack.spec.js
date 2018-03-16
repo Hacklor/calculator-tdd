@@ -65,7 +65,7 @@ describe("CommandStack", () => {
       expect(spy).not.to.be.called
 
       expect(stack.execute()).to.eql(3)
-      expect(spy).not.to.be.calledWith(3)
+      expect(spy).to.be.calledWith(3)
     });
   });
 
