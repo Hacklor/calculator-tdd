@@ -30,4 +30,13 @@ describe("CommandStack", () => {
 
     expect(stack.execute()).to.eql(4)
   });
+
+  it("delays subtracting a number", () => {
+    const spy = sinon.spy(calculator, 'subtract');
+
+    stack.subtract(4)
+    expect(spy).not.to.be.called
+
+    expect(stack.execute()).to.eql(-4)
+  });
 });
