@@ -12,6 +12,7 @@ export class CommandStack {
   }
 
   undo() {
+    this.commands.pop()
   }
 
   add(number) {
