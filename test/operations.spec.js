@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { add, minus, times, square } from "../src/operations";
+import { add, subtract, multiply, square } from "../src/operations";
 
 describe("Operations", () => {
   it("adds two integers", () => {
@@ -12,23 +12,23 @@ describe("Operations", () => {
   });
 
   it("subtracts two integers", () => {
-    expect(minus(3, 1)).to.eql(2)
-    expect(minus(5, 2)).to.eql(3)
-    expect(minus(2, 5)).to.eql(-3)
-    expect(minus(2, 3)).to.eql(-1)
-    expect(minus(-2, 1)).to.eql(-3)
-    expect(minus(1, -2)).to.eql(3)
-    expect(minus(-5, -2)).to.eql(-3)
-    expect(minus(-2, -5)).to.eql(3)
+    expect(subtract(3, 1)).to.eql(2)
+    expect(subtract(5, 2)).to.eql(3)
+    expect(subtract(2, 5)).to.eql(-3)
+    expect(subtract(2, 3)).to.eql(-1)
+    expect(subtract(-2, 1)).to.eql(-3)
+    expect(subtract(1, -2)).to.eql(3)
+    expect(subtract(-5, -2)).to.eql(-3)
+    expect(subtract(-2, -5)).to.eql(3)
   });
 
   it("multiplies two integers", () => {
-    expect(times(1, 2)).to.eql(2)
-    expect(times(3, 2)).to.eql(6)
-    expect(times(2, 3)).to.eql(6)
-    expect(times(-2, 5)).to.eql(-10)
-    expect(times(5, -2)).to.eql(-10)
-    expect(times(-2, -4)).to.eql(8)
+    expect(multiply(1, 2)).to.eql(2)
+    expect(multiply(3, 2)).to.eql(6)
+    expect(multiply(2, 3)).to.eql(6)
+    expect(multiply(-2, 5)).to.eql(-10)
+    expect(multiply(5, -2)).to.eql(-10)
+    expect(multiply(-2, -4)).to.eql(8)
   });
 
   it("squares the given integer", () => {
@@ -40,7 +40,7 @@ describe("Operations", () => {
 
   describe("Regression tests", () => {
     it("combines different operations", () =>
-      expect(times(minus(square(add(2, 3)), 5), 5)).to.eql(100)
+      expect(multiply(subtract(square(add(2, 3)), 5), 5)).to.eql(100)
     );
   });
 });
